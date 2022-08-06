@@ -140,11 +140,6 @@ PRODUCT_PACKAGES += \
 TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 
-# Graphics
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
-
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
