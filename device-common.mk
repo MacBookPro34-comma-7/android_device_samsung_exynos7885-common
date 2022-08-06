@@ -34,6 +34,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/rootdir/etc/atrace.rc:$(TARGET_COPY_OUT_RECOVERY)/root/atrace.rc \
+    $(DEVICE_PATH)/rootdir/etc/ueventd.rc:$(TARGET_COPY_OUT_RECOVERY)/root/ueventd.rc \
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -135,8 +139,6 @@ PRODUCT_PACKAGES += \
 # Boot animation
 TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_TEXTURE_CACHE := true
-TARGET_SCREEN_HEIGHT := 2220
-TARGET_SCREEN_WIDTH := 1080
 
 # Graphics
 PRODUCT_AAPT_CONFIG := normal
