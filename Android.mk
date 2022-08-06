@@ -5,10 +5,11 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-ifneq ($(filter jackpotlte,$(TARGET_DEVICE)),)
-
 LOCAL_PATH := $(call my-dir)
+
+ifneq ($(filter jackpotlte jackpotveltedcm, $(TARGET_DEVICE)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 endif
+

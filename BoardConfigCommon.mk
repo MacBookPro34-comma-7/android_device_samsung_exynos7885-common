@@ -4,12 +4,12 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/samsung/jackpotlte
+COMMON_PATH := device/samsung/universal7885-common
 
 BUILD_BROKEN_DUP_RULES := true
 
 # Include
-TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
+TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
 # Architecture
 TARGET_ARCH := arm64
@@ -27,14 +27,8 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 # Binder
 TARGET_USES_64_BIT_BINDER := true
 
-# Assert
-TARGET_OTA_ASSERT_DEVICE := jackpotlte
-
 # Apex
 DEXPREOPT_GENERATE_APEX_IMAGE := true
-
-# Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := universal7885
 
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -55,9 +49,7 @@ TARGET_NO_KERNEL     := false
 # Kernel
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/samsung/jackpotlte
 TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
-TARGET_KERNEL_CONFIG := exynos7885-jackpotltekor_defconfig
 
 BOARD_KERNEL_CMDLINE := loop.max_part=7
 BOARD_BOOT_HEADER_NAME := SRPQH21B008KU
@@ -96,10 +88,6 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3833593856
 # Partitions - Userdata (26919043072 - 20480)
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 26919043072
 
-# Partitions - Vendor
-BOARD_VENDOR := samsung
-TARGET_COPY_OUT_VENDOR := system/vendor
-
 # Platform
 BOARD_VENDOR := samsung
 TARGET_BOARD_PLATFORM := exynos5
@@ -109,16 +97,10 @@ TARGET_SOC := exynos7885
 
 # Root extra folders
 BOARD_ROOT_EXTRA_FOLDERS += /efs /cpefs
-TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
-
-# Recovery
-BOARD_HAS_DOWNLOAD_MODE := true
-TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.samsungexynos7885
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/include/bluetooth
 
 # Charger
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
@@ -160,7 +142,7 @@ TARGET_SEC_FP_CALL_NOTIFY_ON_CANCEL := true
 TARGET_SEC_FP_USES_PERCENTAGE_SAMPLES := true
 
 # HIDL Manifest
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 
 # VINTF
 PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
@@ -174,13 +156,14 @@ TARGET_LD_SHIM_LIBS := \
     /system/lib/libcamera_client.so|libcamera_client_shim.so \
     /system/lib64/libcamera_client.so|libcamera_client_shim.so
 
+# Seccomp filters
+BOARD_SECCOMP_POLICY += $(COMMON_PATH)/seccomp
 
 # SELinux Policies
-# include device/lineage/sepolicy/exynos/sepolicy.mk
-
-# BOARD_SEPOLICY_TEE_FLAVOR := mobicore
-# include device/samsung_slsi/sepolicy/sepolicy.mk
-
-BOARD_SEPOLICY_DIRS := device/samsung/jackpotlte/sepolicy
+BOARD_SEPOLICY_TEE_FLAVOR := mobicore
+BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
 BOARD_SEPOLICY_VERS := $(PLATFORM_SDK_VERSION).0
+SELINUX_IGNORE_NEVERALLOWS := true
 
+# include device/lineage/sepolicy/exynos/sepolicy.mk
+# include device/samsung_slsi/sepolicy/sepolicy.mk
