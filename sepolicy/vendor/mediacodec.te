@@ -6,6 +6,3 @@ allow mediacodec sysfs:file r_file_perms;
 
 allow mediacodec sysfs:dir { open read };
 
-# sysfs_virtual
-allow mediacodec sysfs_virtual:dir { open read search };
-allow mediacodec sysfs_virtual:file { open read };
