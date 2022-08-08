@@ -165,9 +165,10 @@ BOARD_SECCOMP_POLICY += $(COMMON_PATH)/seccomp
 
 # SELinux Policies
 BOARD_SEPOLICY_TEE_FLAVOR := mobicore
-BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
+include device/lineage/sepolicy/exynos/sepolicy.mk
+include device/samsung_slsi/sepolicy/sepolicy.mk
+
+BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 BOARD_SEPOLICY_VERS := $(PLATFORM_SDK_VERSION).0
 SELINUX_IGNORE_NEVERALLOWS := true
 
-# include device/lineage/sepolicy/exynos/sepolicy.mk
-# include device/samsung_slsi/sepolicy/sepolicy.mk
