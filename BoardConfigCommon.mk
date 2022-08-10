@@ -30,6 +30,19 @@ TARGET_USES_64_BIT_BINDER := true
 # Apex
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
+# Dexpreopt
+ifeq ($(HOST_OS),linux)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
+    ifeq ($(WITH_DEXPREOPT),)
+      WITH_DEXPREOPT := true
+      WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
+    endif
+  endif
+endif
+
+# Treble
+BOARD_VNDK_VERSION := current
+
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_SYSTEMIMAGE_PARTITION_TYPE := ext4
@@ -153,12 +166,9 @@ PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
-    /system/vendor/lib64/libbauthserver.so|libbauthtzcommon_shim.so \
-    /system/vendor/lib/libexynoscamera.so|libexynoscamera_shim.so \
-    /system/vendor/lib64/libexynoscamera.so|libexynoscamera_shim.so \
-    /system/vendor/lib/libvideobeauty_interface.so|libvideobeauty_interface_shim.so \
-    /system/lib/libcamera_client.so|libcamera_client_shim.so \
-    /system/lib64/libcamera_client.so|libcamera_client_shim.so
+    /vendor/lib/libexynoscamera.so|libexynoscamera_shim.so \
+    /vendor/lib64/libexynoscamera.so|libexynoscamera_shim.so \
+    /vendor/lib/libvideobeauty_interface.so|libvideobeauty_interface_shim.so \
 
 # Seccomp filters
 BOARD_SECCOMP_POLICY += $(COMMON_PATH)/seccomp

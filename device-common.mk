@@ -361,8 +361,6 @@ PRODUCT_COPY_FILES += \
 # Shims
 PRODUCT_PACKAGES += \
     libexynoscamera_shim \
-    libcamera_client_shim \
-    libbauthtzcommon_shim \
     libvideobeauty_interface_shim
 
 # stagefright
