@@ -78,10 +78,12 @@ vendor/lib/android.hardware.camera.provider@2.4-legacy.so
 vendor/lib/android.hardware.camera.provider@2.4-external.so
 vendor/lib/libOpenCv.camera.samsung.so
 vendor/lib/libSEF.quram.so
+vendor/lib/libcamera_client.so
 vendor/lib/libexynoscamera.so
 vendor/lib/libexynoscamera3.so
 vendor/lib/libexynosv4l2.so
 vendor/lib/libimageextractor.so
+vendor/lib/libnativewindow.so
 vendor/lib/libpredeflicker_native.so
 vendor/lib/libsmartfitting_interface.so
 vendor/lib/libsaiv_BeautySolutionVideo.so
@@ -90,10 +92,12 @@ vendor/lib64/android.hardware.camera.provider@2.4-legacy.so
 vendor/lib64/android.hardware.camera.provider@2.4-external.so
 vendor/lib64/libOpenCv.camera.samsung.so
 vendor/lib64/libSEF.quram.so
+vendor/lib64/libcamera_client.so
 vendor/lib64/libexynoscamera.so
 vendor/lib64/libexynoscamera3.so
 vendor/lib64/libexynosv4l2.so
 vendor/lib64/libimageextractor.so
+vendor/lib64/libnativewindow.so
 vendor/lib64/libpredeflicker_native.so
 vendor/lib64/libsaiv_BeautySolutionVideo.so
 vendor/lib64/libsmartfitting_interface.so
@@ -215,6 +219,7 @@ vendor/lib64/egl/libGLES_mali.so
 # HAL Modules
 vendor/lib/hw/audio.playback_record.default.so
 vendor/lib/hw/audio.primary.exynos7885.so
+vendor/lib/hw/camera.exynos7885.so
 vendor/lib/hw/camera.vendor.exynos7885.so
 vendor/lib/hw/gatekeeper.exynos7885.so
 vendor/lib/hw/gralloc.exynos7885.so
@@ -224,6 +229,7 @@ vendor/lib/hw/memtrack.universal7885.so
 vendor/lib/hw/sound_trigger.primary.universal7885.so
 vendor/lib/hw/sensors.universal7885.so
 vendor/lib/hw/thermal.universal7885.so
+vendor/lib64/hw/camera.exynos7885.so
 vendor/lib64/hw/camera.vendor.exynos7885.so
 vendor/lib64/hw/gatekeeper.exynos7885.so
 vendor/lib64/hw/gps.default.so
