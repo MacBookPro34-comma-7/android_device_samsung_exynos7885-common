@@ -75,6 +75,7 @@ vendor/lib64/libbt-vendor.so
 
 # Camera
 vendor/lib/android.hardware.camera.provider@2.4-legacy.so
+vendor/lib/android.hardware.camera.provider@2.5-legacy.so
 vendor/lib/android.hardware.camera.provider@2.4-external.so
 vendor/lib/libOpenCv.camera.samsung.so
 vendor/lib/libSEF.quram.so
@@ -365,7 +366,9 @@ vendor/lib64/libsomxcore_vendor.so
 
 # Sensor
 vendor/lib/libsensorlistener.so
+vendor/lib/libsensorndkbridge.so
 vendor/lib64/libsensorlistener.so
+vendor/lib64/libsensorndkbridge.so
 
 # TEE
 vendor/bin/hw/vendor.trustonic.tee@1.0-service
@@ -395,7 +398,6 @@ vendor/app/mcRegistry/ffffffffd00000000000000000000017.tlbin
 vendor/app/mcRegistry/07010000000000000000000000000000.tlbin
 vendor/app/mcRegistry/ffffffffd00000000000000000000016.tlbin
 vendor/app/mcRegistry/ffffffff000000000000000000000005.tlbin
-vendor/app/mcRegistry/ffffffffd0000000000000000000000a.tlbin
 vendor/app/mcRegistry/ffffffff000000000000000000000045.tlbin
 vendor/app/mcRegistry/08130000000000000000000000000000.tlbin
 vendor/app/mcRegistry/ffffffff000000000000000000000028.tlbin
