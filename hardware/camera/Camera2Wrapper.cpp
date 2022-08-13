@@ -26,8 +26,10 @@
 
 #include "CameraWrapper.h"
 #include "Camera2Wrapper.h"
-#include "CallbackWorkerThread.h"
 
+using ::android::hardware::camera::common::V1_0::helper::CameraParameters;
+
+#include "CallbackWorkerThread.h"
 CallbackWorkerThread cbThread;
 
 #include <sys/time.h>
@@ -80,7 +82,7 @@ static int check_vendor_module()
 
 static char * camera2_fixup_getparams(int id __unused, const char * settings)
 {
-    android::CameraParameters params;
+    CameraParameters params;
     params.unflatten(android::String8(settings));
 
 #ifdef LOG_PARAMETERS
@@ -103,7 +105,7 @@ static char * camera2_fixup_getparams(int id __unused, const char * settings)
 
 static char * camera2_fixup_setparams(int id __unused, const char * settings)
 {
-    android::CameraParameters params;
+    CameraParameters params;
     params.unflatten(android::String8(settings));
 
 #ifdef LOG_PARAMETERS
