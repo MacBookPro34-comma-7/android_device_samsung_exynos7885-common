@@ -140,6 +140,7 @@ PRODUCT_PACKAGES += \
 TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 
+# Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
@@ -380,10 +381,6 @@ PRODUCT_PACKAGES += \
 # OTA Update
 PRODUCT_PACKAGES += \
     Updater
-
-# VNDK-SP
-VNDK_SP_LIBRARIES := \
-    libbacktrace
 
 # Shipping API
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
