@@ -395,4 +395,4 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # call the proprietary setup
 $(call inherit-product, vendor/samsung/universal7885-common/universal7885-common-vendor.mk)
-
+$(call inherit-product, vendor/samsung/$(LINEAGE_BUILD)/$(LINEAGE_BUILD)-vendor.mk)
