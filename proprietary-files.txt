@@ -62,8 +62,6 @@ vendor/etc/audio_effects.xml
 vendor/etc/audio_effects_common.conf
 vendor/etc/audio_effects_sec.xml
 vendor/etc/audio_policy_configuration_sec.xml
-vendor/etc/media_codecs.xml
-vendor/etc/media_codecs_performance.xml
 vendor/etc/media_codecs_google_video_le.xml
 
 # Bluetooth
@@ -74,29 +72,18 @@ vendor/lib/libbt-vendor.so
 vendor/lib64/libbt-vendor.so
 
 # Camera
-vendor/lib/android.hardware.camera.provider@2.4-legacy.so
-vendor/lib/android.hardware.camera.provider@2.5-legacy.so
-vendor/lib/android.hardware.camera.provider@2.4-external.so
 vendor/lib/libOpenCv.camera.samsung.so
 vendor/lib/libSEF.quram.so
 vendor/lib/libcamera_client.so
-vendor/lib/libexynoscamera.so
-vendor/lib/libexynoscamera3.so
-vendor/lib/libexynosv4l2.so
 vendor/lib/libimageextractor.so
 vendor/lib/libnativewindow.so
 vendor/lib/libpredeflicker_native.so
 vendor/lib/libsmartfitting_interface.so
 vendor/lib/libsaiv_BeautySolutionVideo.so
 vendor/lib/libvideobeauty_interface.so
-vendor/lib64/android.hardware.camera.provider@2.4-legacy.so
-vendor/lib64/android.hardware.camera.provider@2.4-external.so
 vendor/lib64/libOpenCv.camera.samsung.so
 vendor/lib64/libSEF.quram.so
 vendor/lib64/libcamera_client.so
-vendor/lib64/libexynoscamera.so
-vendor/lib64/libexynoscamera3.so
-vendor/lib64/libexynosv4l2.so
 vendor/lib64/libimageextractor.so
 vendor/lib64/libnativewindow.so
 vendor/lib64/libpredeflicker_native.so
@@ -169,71 +156,29 @@ vendor/lib64/hw/android.hardware.gnss@1.1-impl.so
 vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so
 
 # Graphics
-vendor/bin/hw/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service
 vendor/etc/init/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service.rc
-vendor/lib/libExynosHWCService.so
 vendor/lib/libFrucSSMLib.so
-vendor/lib/libGrallocWrapper.so
-vendor/lib/libacryl.so
-vendor/lib/libcsc.so
-vendor/lib/libexynosdisplay.so
-vendor/lib/libexynosgscaler.so
-vendor/lib/libexynosscaler.so
-vendor/lib/libexynosutils.so
 vendor/lib/libgiantmscl.so
-vendor/lib/libhwc2on1adapter.so
-vendor/lib/libhwc2onfbadapter.so
-vendor/lib/libhwjpeg.so
-vendor/lib/libion_exynos.so
 vendor/lib/libpixelflinger.so
-vendor/lib/libsecnativefeature.so
 vendor/lib/libremotedisplay.so
-vendor/lib/libuniapi.so
-vendor/lib/libuniplugin.so
-vendor/lib/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
-vendor/lib/egl/libGLES_mali.so
-vendor/lib64/libExynosHWCService.so
 vendor/lib64/libFrucSSMLib.so
-vendor/lib64/libGrallocWrapper.so
-vendor/lib64/libacryl.so
-vendor/lib64/libcsc.so
-vendor/lib64/libexynosdisplay.so
-vendor/lib64/libexynosgscaler.so
-vendor/lib64/libexynosscaler.so
-vendor/lib64/libexynosutils.so
 vendor/lib64/libgiantmscl.so
-vendor/lib64/libhwc2on1adapter.so
-vendor/lib64/libhwc2onfbadapter.so
-vendor/lib64/libhwjpeg.so
-vendor/lib64/libion_exynos.so
 vendor/lib64/libmaet.so
-vendor/lib64/libmpp.so
 vendor/lib64/libpixelflinger.so
 vendor/lib64/libremotedisplay.so
-vendor/lib64/libsecnativefeature.so
 vendor/lib64/libsxqk_skia.so
-vendor/lib64/libuniapi.so
-vendor/lib64/libuniplugin.so
-vendor/lib64/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
-vendor/lib64/egl/libGLES_mali.so
 
 # HAL Modules
 vendor/lib/hw/audio.playback_record.default.so
 vendor/lib/hw/audio.primary.exynos7885.so
-vendor/lib/hw/camera.vendor.exynos7885.so
 vendor/lib/hw/gatekeeper.exynos7885.so
-vendor/lib/hw/gralloc.exynos7885.so
-vendor/lib/hw/hwcomposer.exynos7885.so
 vendor/lib/hw/lights.exynos5.so
 vendor/lib/hw/memtrack.universal7885.so
 vendor/lib/hw/sound_trigger.primary.universal7885.so
 vendor/lib/hw/sensors.universal7885.so
 vendor/lib/hw/thermal.universal7885.so
-vendor/lib64/hw/camera.vendor.exynos7885.so
 vendor/lib64/hw/gatekeeper.exynos7885.so
 vendor/lib64/hw/gps.default.so
-vendor/lib64/hw/gralloc.exynos7885.so
-vendor/lib64/hw/hwcomposer.exynos7885.so
 vendor/lib64/hw/lights.exynos5.so
 vendor/lib64/hw/memtrack.universal7885.so
 vendor/lib64/hw/sensors.universal7885.so
@@ -285,37 +230,6 @@ vendor/lib64/android.hardware.nfc@1.0.so
 vendor/lib64/android.hardware.nfc@1.1.so
 vendor/lib64/vendor.samsung.hardware.nfc@1.1.so
 
-# OMX
-vendor/lib/libExynosOMX_Core.so
-vendor/lib/libExynosOMX_Resourcemanager.so
-vendor/lib/omx/libOMX.Exynos.MPEG4.Decoder.so
-vendor/lib/omx/libOMX.Exynos.WMV.Decoder.so
-vendor/lib/omx/libOMX.Exynos.AVC.Encoder.so
-vendor/lib/omx/libOMX.Exynos.AVC.Decoder.so
-vendor/lib/omx/libOMX.Exynos.VP8.Encoder.so
-vendor/lib/omx/libOMX.Exynos.HEVC.Encoder.so
-vendor/lib/omx/libOMX.Exynos.VP9.Decoder.so
-vendor/lib/omx/libOMX.Exynos.MPEG4.Encoder.so
-vendor/lib/omx/libOMX.Exynos.VP8.Decoder.so
-vendor/lib/omx/libOMX.Exynos.HEVC.Decoder.so
-vendor/lib/libstagefrighthw.so
-vendor/lib/libstagefright_omx_vendor.so
-vendor/lib/libstagefright_omx_utils.so
-vendor/lib64/libExynosOMX_Core.so
-vendor/lib64/libExynosOMX_Resourcemanager.so
-vendor/lib64/omx/libOMX.Exynos.MPEG4.Decoder.so
-vendor/lib64/omx/libOMX.Exynos.WMV.Decoder.so
-vendor/lib64/omx/libOMX.Exynos.AVC.Encoder.so
-vendor/lib64/omx/libOMX.Exynos.AVC.Decoder.so
-vendor/lib64/omx/libOMX.Exynos.VP8.Encoder.so
-vendor/lib64/omx/libOMX.Exynos.HEVC.Encoder.so
-vendor/lib64/omx/libOMX.Exynos.VP9.Decoder.so
-vendor/lib64/omx/libOMX.Exynos.MPEG4.Encoder.so
-vendor/lib64/omx/libOMX.Exynos.VP8.Decoder.so
-vendor/lib64/omx/libOMX.Exynos.HEVC.Decoder.so
-vendor/lib64/libstagefrighthw.so
-vendor/lib64/libstagefright_omx_utils.so
-
 # Radio
 vendor/bin/argosd
 vendor/bin/cbd
@@ -346,21 +260,6 @@ vendor/lib64/vendor.samsung.hardware.radio.channel@1.0_vendor.so
 vendor/lib64/vendor.samsung.hardware.radio.sechook@1.0_vendor.so
 vendor/lib64/vendor.samsung.hardware.radio@1.2_vendor.so
 vendor/lib64/vendor.samsung.hardware.tdmb@1.0.so
-
-# Stagefright
-vendor/lib/libapex_cmn.so
-vendor/lib/libapex_utils.so
-vendor/lib/libcodecsolution.so
-vendor/lib/libsomxcore_vendor.so
-vendor/lib/libstagefright_bufferqueue_helper_vendor.so
-vendor/lib/libstagefright_httplive_sec.so
-vendor/lib/libstagefright_soft_ac4dec.so
-vendor/lib/libstagefright_soft_g711dec.so
-vendor/lib/libstagefright_soft_ddpdec.so
-vendor/lib64/libapex_cmn.so
-vendor/lib64/libapex_utils.so
-vendor/lib64/libcodecsolution.so
-vendor/lib64/libsomxcore_vendor.so
 
 # Sensor
 vendor/lib/libsensorlistener.so
