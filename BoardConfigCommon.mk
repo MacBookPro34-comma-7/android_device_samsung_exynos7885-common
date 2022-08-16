@@ -169,6 +169,7 @@ TARGET_LD_SHIM_LIBS := \
     /vendor/lib/libexynoscamera.so|libexynoscamera_shim.so \
     /vendor/lib64/libexynoscamera.so|libexynoscamera_shim.so \
     /vendor/lib/libvideobeauty_interface.so|libvideobeauty_interface_shim.so \
+    /system/bin/mediaserver|libstagefright_shim.so
 
 # Seccomp filters
 BOARD_SECCOMP_POLICY += $(COMMON_PATH)/seccomp
