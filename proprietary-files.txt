@@ -12,12 +12,7 @@ vendor/lib/libaudio-ril.so
 vendor/lib/libaboxpcmdump.so
 vendor/lib/libaudio_soundtrigger.so
 vendor/lib/libdatamod.so
-vendor/lib/libhifills.so
-vendor/lib/libhifills_interface.so
 vendor/lib/librecordalive.so
-vendor/lib/libremosaiclib.so
-vendor/lib/libremosaic_daemon.so
-vendor/lib/libremosaic_tuning.so
 vendor/lib/libsamsungDiamondVoice.so
 vendor/lib/libsecaudiocoreutils.so
 vendor/lib/libsecaudioinfo.so
@@ -36,13 +31,8 @@ vendor/lib/soundfx/libmysound.so
 vendor/lib/soundfx/libgearvr.so
 vendor/lib/soundfx/libswdap.so
 vendor/lib/soundfx/libplaybackrecorder.so
-vendor/lib64/libhifills.so
-vendor/lib64/libhifills_interface.so
 vendor/lib64/libsecaudioinfo.so
 vendor/lib64/libtinyalsa.so
-vendor/lib64/libremosaiclib.so
-vendor/lib64/libremosaic_daemon.so
-vendor/lib64/libremosaic_tuning.so
 vendor/lib64/lib_soundaliveresampler.so
 vendor/lib64/lib_SoundAlive_SRC384_ver320.so
 vendor/lib64/soundfx/libaudioeffectoffload.so
