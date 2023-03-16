@@ -183,7 +183,6 @@ vendor/lib64/libkeymaster_helper.so
 vendor/lib64/libkeymaster_mdfpp.so
 
 # LPM
-bin/lpm
 media/incomplete_connect.spi
 media/bootsamsungloop.qmg
 media/water_protection_usb.spi
@@ -204,6 +203,7 @@ media/bootsamsung.qmg
 media/shutdown.qmg
 media/battery_error.spi
 media/temperature_limit_usb.spi
+vendor/bin/lpm
 vendor/lib64/libmaet.so
 vendor/lib64/libsxqk_skia.so
 
